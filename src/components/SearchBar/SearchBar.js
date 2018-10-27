@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getUserSuggestions } from "../../redux/reducer";
+import { updateSearchBarText } from "../../redux/reducer";
 
 class SearchBar extends Component {
   handleSearchBarChange = evt => {
@@ -43,7 +43,7 @@ const mapStateToProps = ({ searchBarText, users, isError }) => ({
   isError
 });
 const mapDispatchTOProps = dispatch => ({
-  updateText: text => dispatch(getUserSuggestions(text))
+  updateText: text => dispatch(updateSearchBarText(text))
 });
 
 export default connect(
