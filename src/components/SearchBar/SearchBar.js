@@ -10,11 +10,16 @@ class SearchBar extends Component {
     const { users, isError } = this.props;
     return (
       <div>
-        <input
-          type="text"
-          placeholder="Search..."
-          onChange={this.handleSearchBarChange}
-        />
+        <div className="wrap">
+          <div className="search">
+            <input
+              type="text"
+              class="searchTerm"
+              placeholder="Who are you looking for?"
+              onChange={this.handleSearchBarChange}
+            />
+          </div>
+        </div>
         {isError ? (
           <p>Something went wrong. Try again</p>
         ) : (
