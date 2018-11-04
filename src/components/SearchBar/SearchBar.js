@@ -11,14 +11,11 @@ class SearchBar extends Component {
     return (
       <div>
         <div className="wrap">
-          <div className="search">
-            <input
-              type="text"
-              className="searchTerm"
-              placeholder="Who are you looking for?"
-              onChange={this.handleSearchBarChange}
-            />
-          </div>
+          <input
+            type="text"
+            placeholder="Who are you looking for?"
+            onChange={this.handleSearchBarChange}
+          />
         </div>
         {isError ? (
           <p>Something went wrong. Try again</p>
