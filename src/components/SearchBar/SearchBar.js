@@ -11,14 +11,11 @@ class SearchBar extends Component {
     return (
       <div>
         <div className="wrap">
-          <div className="search">
-            <input
-              type="text"
-              class="searchTerm"
-              placeholder="Who are you looking for?"
-              onChange={this.handleSearchBarChange}
-            />
-          </div>
+          <input
+            type="text"
+            placeholder="Who are you looking for?"
+            onChange={this.handleSearchBarChange}
+          />
         </div>
         {isError ? (
           <p>Something went wrong. Try again</p>
@@ -55,11 +52,3 @@ export default connect(
   mapStateToProps,
   mapDispatchTOProps
 )(SearchBar);
-// <div class="wrap">
-//    <div class="search">
-//       <input type="text" class="searchTerm" placeholder="What are you looking for?">
-//       <button type="submit" class="searchButton">
-//         <i class="fa fa-search"></i>
-//      </button>
-//    </div>
-// </div>
